@@ -1,5 +1,5 @@
 from ninja import Router
-from mynewproject.views.debug.schema import PingResponse
+from game_of_life.views.debug.schema import PingResponse
 
 debug_router = Router()
 

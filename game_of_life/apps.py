@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class MyNewProjectConfig(AppConfig):
+class GameOfLifeConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "mynewproject"
+    name = "game_of_life"

@@ -1,5 +1,5 @@
 from ninja import NinjaAPI
-from mynewproject.views.debug.router import debug_router
+from game_of_life.views.debug.router import debug_router
 
 api = NinjaAPI()
 

@@ -1,22 +1,22 @@
 databases:
-  - name: mynewproject_db
+  - name: game_of_life_db
     plan: free
-    databaseName: mynewproject
-    user: mynewproject
+    databaseName: game_of_life
+    user: game_of_life
 
 services:
   - type: web
     plan: free
-    name: mynewproject
+    name: game_of_life
     runtime: python
     buildCommand: "./build.sh"
-    startCommand: "pipenv run daphne -b 0.0.0.0 mynewproject.asgi:application"
+    startCommand: "pipenv run daphne -b 0.0.0.0 game_of_life.asgi:application"
     envVars:
       - key: USE_POSTGRES
         value: true
       - key: DATABASE_URL
         fromDatabase:
-          name: mynewproject_db
+          name: game_of_life_db
           property: connectionString
       - key: SECRET_KEY
         generateValue: true
